@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Phishing Checker</title>
+  <style>
+    body {
+      width: 200px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      color: #333;
+    }
+
+    input[type="text"],
+    button,
+    label {
+      display: block;
+      width: 100%;
+      margin: 0 auto 10px auto;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .phishing {
+      color: #d9534f; /* Red for phishing */
+    }
+
+    .non-phishing {
+      color: #337ab7; /* Blue for non-phishing */
+    }
+
+    label {
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn chỉnh văn bản và checkbox theo chiều dọc */
+    }
+    /* Popup Modal CSS */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  </style>
+</head>
+
+<body>
+  <h3>Enter URL:</h3>
+  <input type="text" id="urlInput" placeholder="Enter URL">
+  <button id="checkButton">Check Phishing</button>
+  <div id="result"></div>
+
+  <h3>Features:</h3>
+  <label><input type="checkbox" id="feature1">Check Phishing with CatBoost</label>
+  <label><input type="checkbox" id="feature2">Check Phishing with BERT</label>
+
+  <button id="addToBlacklist">Add to Blacklist</button>
+
+  <button id="showBlacklist">Show Blacklist</button>
+
+  <button id="removeBlacklist">Remove Blacklist</button>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

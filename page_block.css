@@ -1,0 +1,86 @@
+/* styles.css */
+body {
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.container {
+    margin-top: 50px;
+}
+
+#warning-icon {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#warning-icon img {
+    max-width: 100px;
+}
+
+#title {
+    text-align: center;
+    font-size: 36px;
+    color: #dc3545; /* Red color for warning */
+}
+
+#subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#buttons {
+    text-align: center;
+}
+
+#btn_continue {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 20px;
+    background-color: #dc3545; /* Red color for button */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#btn_continue:hover {
+    background-color: #c82333; /* Darker red color on hover */
+}
+
+#btn_safety {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color for button */
+    color: #fff; /* White text color */
+    border-radius: 5px;
+    border: none;
+}
+
+#btn_safety:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+#info {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #6c757d; /* Gray color for information text */
+}
+
+
+#buttons {
+    margin-top: 20px;
+}
+
+#btn_continue, #btn_safety {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#btn_safety {
+    background-color: #dc3545;
+}

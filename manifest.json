@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Phishing Detector",
+  "version": "1.0",
+  "description": "Detects phishing URLs",
+  "icons": {
+    "48": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "webRequest",
+    "activeTab",
+    "storage",
+    "scripting",
+    "background",
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "web_accessible_resources": [
+        {
+            "resources": ["page_blocked.html", "page_blocked.js", "icon.png"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
